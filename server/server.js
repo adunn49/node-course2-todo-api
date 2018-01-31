@@ -52,7 +52,7 @@ app.delete('/todos/:id', (req, res) => {
     if (!todo) {
       return res.status(404).send('Todo not found');
     }
-    return res.send(todo);
+    return res.send({todo});
   }).catch((e) => {
     return res.status(400).send('Could not delete todo');
   })
